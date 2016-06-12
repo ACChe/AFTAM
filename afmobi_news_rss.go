@@ -29,19 +29,22 @@ func main() {
 
 	//http://www.theguardian.com/uk/rss
 	go PollFeed("http://www.theguardian.com/uk/rss", itemHandlerTheguardian)
+
 	//
 	go PollFeed("http://www.goal.com/en/feeds/news?fmt=rss&ICID=HP", itemHandlerGoal)
+
 	//
 	go PollFeed("http://en.vietnamplus.vn/rss/news.rss", itemHandlerVietnamplus)
+
 	//
 	go PollFeed("http://www.biztechafrica.com/feed/rss", itemHandlerBiztechafrica)
-	//
 
-	go PollFeed("http://feeds.bbci.co.uk/news/world/africa/rss.xml", itemHandlerBBCAfrica)
 	//
+	go PollFeed("http://feeds.bbci.co.uk/news/world/africa/rss.xml", itemHandlerBBCAfrica)
 
 	//
 	PollFeed("http://allafrica.com/tools/headlines/rdf/latest/headlines.rdf", itemHandlerAllafrica)
+
 	//http://www.thisdaylive.com/go/search/?search=News&contenttype=article&sort=date&output=rss
 	//PollFeed("http://www.thisdaylive.com/go/search/?search=News&contenttype=article&sort=date&output=rss", itemHandlerThisdaylive)
 
